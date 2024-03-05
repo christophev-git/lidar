@@ -27,6 +27,10 @@ Partial Class Form1
         FolderBrowserDialog1 = New FolderBrowserDialog()
         OpenFileDialog1 = New OpenFileDialog()
         ProgressBar1 = New ProgressBar()
+        ListBox1 = New ListBox()
+        Button2 = New Button()
+        TBtaille = New TextBox()
+        Label1 = New Label()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -58,11 +62,49 @@ Partial Class Form1
         ProgressBar1.Size = New Size(655, 36)
         ProgressBar1.TabIndex = 2
         ' 
+        ' ListBox1
+        ' 
+        ListBox1.FormattingEnabled = True
+        ListBox1.ItemHeight = 15
+        ListBox1.Location = New Point(12, 318)
+        ListBox1.Name = "ListBox1"
+        ListBox1.Size = New Size(217, 94)
+        ListBox1.TabIndex = 3
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(253, 318)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(208, 29)
+        Button2.TabIndex = 4
+        Button2.Text = "Create JSON pipeline"
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' TBtaille
+        ' 
+        TBtaille.Location = New Point(398, 287)
+        TBtaille.Name = "TBtaille"
+        TBtaille.Size = New Size(63, 23)
+        TBtaille.TabIndex = 5
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(253, 295)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(124, 15)
+        Label1.TabIndex = 6
+        Label1.Text = "Taille cellule raster (m)"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(Label1)
+        Controls.Add(TBtaille)
+        Controls.Add(Button2)
+        Controls.Add(ListBox1)
         Controls.Add(ProgressBar1)
         Controls.Add(DataGridView1)
         Controls.Add(Button1)
@@ -70,6 +112,7 @@ Partial Class Form1
         Text = "Form1"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Button1 As Button
@@ -77,5 +120,9 @@ Partial Class Form1
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents TBtaille As TextBox
+    Friend WithEvents Label1 As Label
 
 End Class
